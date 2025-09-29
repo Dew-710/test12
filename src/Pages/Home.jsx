@@ -5,7 +5,7 @@ import Info from "../Components/Info";
 import About from "../Components/About";
 import BookAppointment from "../Components/BookAppointment";
 import Reviews from "../Components/Reviews";
-import Doctors from "../Components/Doctors";
+import Doctors from "../Components/Chefs";
 import Footer from "../Components/Footer";
 
 function Home() {

@@ -1,5 +1,5 @@
 import React from "react";
-import DoctorCard from "./DoctorCard";
+import DoctorCard from "./Chefcards";
 import profile1 from "../Assets/profile-1.png";
 import profile2 from "../Assets/profile-2.png";
 import profile3 from "../Assets/profile-3.png";

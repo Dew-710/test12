@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <div className="footer-section">
-      <div className="footer-container">
+    <div className="bgb-[#1b2433]">
+      <div className="p-[40px] flex-wrap gap-10 justify-between text-white border-gray-[2px] border-radius-[8px] flex max-w-7xl mx-auto px-4 md:px-8">
         <div className="ft-info">
           <div className="ft-info-p1">
             <p className="ft-title">
@@ -45,7 +45,7 @@ function Footer() {
           <p className="ft-list-title">Pháp lý</p>
           <ul className="ft-list-items">
             <li>
-              <Link to={"/legal"}>Thông tin chung</Link>
+              <Link to={"/legal"}>Thông tin chung</Link>~
             </li>
             <li>
               <Link to={"/legal"}>Chính sách bảo mật</Link>

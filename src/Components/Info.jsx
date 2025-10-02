@@ -9,7 +9,7 @@ function Info() {
      <br />
      <br />
       <div className="my-24 pb-20 flex flex-col items-center"> 
-        <h3 className="mt-20 font-bold font-poppins mb-12 text-black text-[40px] relative inline-block"> 
+        <h3 className="mt-20 font-bold font-poppins mb-12 text-black text-[40px] relative inline-block "> 
           <span className=" pb-2 text-black-800">
             Ẩm Thực Việt Nam
             <hr className="absolute left-0 -bottom-2 w-full h-1 bg-pink-500 rounded border-0" /> 

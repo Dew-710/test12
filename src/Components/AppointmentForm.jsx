@@ -73,66 +73,68 @@ function AppointmentForm() {
   };
 
   return (
-    <div className="min-h-screen min-w-screen bg-gray-100 py-12 px-4 flex items-center justify-center">
-      <div className="max-w-2xl min-h-screen w-full h-full mx-auto bg-white p-8 rounded-lg shadow-lg items-center justify-center flex flex-col">
+    <div className="flex justify-center items-center min-h-screen min-w-screen bg-gradient-to-r from-[#ECF2FF] to-[#FBFCFF] py-12">
+      <div className="items-center flex flex-col gap-6 p-8 bg-white rounded-lg shadow-lg w-full max-w-lg min-h-screen mx-4">
         {/* Header */}
-        <div className="mb-20 text-center">
-          <h1 className="text-4xl font-bold text-blue-700">
+        <div className="text-center mb-8">
+          <h1 className="text-3xl font-bold mb-2 text-blue-700 tracking-wide">
             <Link to="/" className="hover:underline">
-              DEW Food <span className="ml-2 text-2xl text-blue-500">🍽️</span>
+              DEW Food <span role="img" aria-label="plate">🍽️</span>
             </Link>
           </h1>
-          <p className="mt-10px text-gray-600 text-lg font-medium ">
+          <p className="text-gray-500 font-rubik text-lg">
             Đặt bàn nhà hàng trực tuyến
           </p>
         </div>
 
         {/* Form */}
-        <form className="space-y-6" onSubmit={handleSubmit}>
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col gap-6 w-full"
+          autoComplete="off"
+        >
           {/* Họ tên */}
           <div>
-            <label htmlFor="customerName" className="block text-base font-medium text-gray-700 mb-1">
+            <label htmlFor="customerName" className="font-rubik text-gray-700 mb-1 block">
               Họ và tên khách hàng:
             </label>
             <input
+              className={`w-full bg-blue-50 text-gray-900 font-rubik text-base p-3 rounded-lg border ${formErrors.customerName ? "border-red-400" : "border-gray-300"} focus:outline-none focus:ring-2 focus:ring-blue-500`}
               id="customerName"
               type="text"
               value={customerName}
               onChange={(e) => setCustomerName(e.target.value)}
-              className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 text-base"
+              placeholder="Nhập họ và tên (ít nhất 8 ký tự)"
             />
             {formErrors.customerName && (
-              <p className="text-red-500 text-xs mt-1">{formErrors.customerName}</p>
+              <p className="text-red-500 text-sm mt-1">{formErrors.customerName}</p>
             )}
           </div>
-
-          {/* Số điện thoại */}
-          <div>
-            <label htmlFor="phoneNumber" className="block text-base font-medium text-gray-700 mb-1">
+          <div className="mb-4">
+            <label className="block font-rubik text-gray-700 mb-2" htmlFor="phoneNumber">
               Số điện thoại khách hàng:
             </label>
             <input
+              className="w-full bg-blue-50 text-gray-900 font-rubik text-base p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
               id="phoneNumber"
               type="text"
               value={phoneNumber}
               onChange={(e) => setPhoneNumber(e.target.value)}
-              className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 text-base"
             />
             {formErrors.phoneNumber && (
-              <p className="text-red-500 text-xs mt-1">{formErrors.phoneNumber}</p>
+              <p className="text-red-500 text-sm mt-1">{formErrors.phoneNumber}</p>
             )}
           </div>
 
           {/* Giới tính */}
           <div>
-            <label htmlFor="gender" className="block text-base font-medium text-gray-700 mb-1">
+            <label className="font-rubik text-gray-700" htmlFor="gender">
               Giới tính khách hàng:
             </label>
             <select
               id="gender"
               value={gender}
               onChange={(e) => setGender(e.target.value)}
-              className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 text-base"
             >
               <option value="default">Chọn</option>
               <option value="male">Nam</option>
@@ -140,13 +142,13 @@ function AppointmentForm() {
               <option value="private">Không muốn tiết lộ</option>
             </select>
             {formErrors.gender && (
-              <p className="text-red-500 text-xs mt-1">{formErrors.gender}</p>
+              <p>{formErrors.gender}</p>
             )}
           </div>
 
           {/* Thời gian */}
           <div>
-            <label htmlFor="appointmentTime" className="block text-base font-medium text-gray-700 mb-1">
+            <label className="font-rubik text-gray-700"  htmlFor="appointmentTime">
               Thời gian đặt bàn mong muốn:
             </label>
             <input
@@ -154,30 +156,28 @@ function AppointmentForm() {
               type="datetime-local"
               value={appointmentTime}
               onChange={(e) => setAppointmentTime(e.target.value)}
-              className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 text-base"
             />
             {formErrors.appointmentTime && (
-              <p className="text-red-500 text-xs mt-1">{formErrors.appointmentTime}</p>
+              <p>{formErrors.appointmentTime}</p>
             )}
           </div>
 
           {/* Hình thức đặt bàn */}
           <div>
-            <label htmlFor="preferredMode" className="block text-base font-medium text-gray-700 mb-1">
+            <label className="font-rubik text-gray-700"  htmlFor="preferredMode">
               Hình thức đặt bàn:
             </label>
             <select
               id="preferredMode"
               value={preferredMode}
               onChange={(e) => setPreferredMode(e.target.value)}
-              className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 text-base"
             >
               <option value="default">Chọn</option>
               <option value="voice">Gọi điện thoại</option>
               <option value="online">Đặt trực tuyến</option>
             </select>
             {formErrors.preferredMode && (
-              <p className="text-red-500 text-xs mt-1">{formErrors.preferredMode}</p>
+              <p>{formErrors.preferredMode}</p>
             )}
           </div>
 
@@ -185,31 +185,27 @@ function AppointmentForm() {
           <button
             type="submit"
             disabled={isSubmitted}
-            className={`w-full py-3 px-4 font-semibold rounded transition text-lg ${
-              isSubmitted
-                ? "bg-gray-400 cursor-not-allowed text-white"
-                : "bg-blue-600 hover:bg-blue-700 text-white"
-            }`}
           >
             {isSubmitted ? "Đang xử lý..." : "Xác nhận đặt bàn"}
           </button>
 
           {/* Thông báo */}
           {isSubmitted && (
-            <p className="text-green-600 text-base mt-4 text-center">
+            <p>
               Thông tin đặt bàn đã được gửi đến số điện thoại của khách hàng qua SMS.
             </p>
           )}
         </form>
 
         {/* Footer */}
-        <div className="text-center text-gray-500 text-xs mt-12">
+        <div>
           <p>© 1999-2026 DEW Food. Đã đăng ký bản quyền.</p>
         </div>
 
         <ToastContainer autoClose={5000} limit={1} closeButton={false} />
       </div>
-    </div>
+      </div>
+  
   );
 }
 

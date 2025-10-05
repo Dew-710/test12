@@ -36,18 +36,21 @@ function Hero() {
     <div className="w-full min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-[#ECF2FF] to-[#FBFCFF] relative py-8">
       <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12 w-full md:max-w-4/5 mx-auto px-4 md:px-8">
         {/* Text Section */}
-        <div className="w-full md:w-3/5 px-0 md:px-8 text-center md:text-left">
+        <div className="sm:text-center sm:items-center flex flex-col w-full md:w-3/5 px-0 md:px-8 text-center md:text-left md:items-start"> "> 
+        <div classname="w-full sm:p-8 p-4 bg-white rounded-lg shadow-lg mb-6 flex flex-col items-center">
+
           <p className="mb-3 text-[#4d4b4b] font-rubik text-[22px] font-bold tracking-wide">
             ❤️ Trải Nghiệm Ăn Uống Của Bạn Là Ưu Tiên Hàng Đầu
           </p>
-          <h2 className="max-w-xl text-black text-4xl md:text-5xl font-poppins font-bold">
+          <h2 className="text-black text-4xl md:text-5xl font-poppins font-bold">
             Khám Phá Bữa Ăn Hoàn Hảo Và Đặt Bàn Ngay
           </h2>
-          <p className="max-w-lg text-[#4d4b4b] font-rubik text-[18px] tracking-wide leading-7 mt-8 mb-8">
+          <p className="text-[#4d4b4b] font-rubik text-[18px] tracking-wide leading-7 mt-8 mb-8">
             Thưởng thức những món ăn tinh tế được chế biến bởi các đầu bếp chuyên nghiệp. Đặt bàn dễ dàng, trải nghiệm cá nhân hóa và tận hưởng những món ăn ngon nhất, tất cả chỉ với một cú nhấp chuột.
           </p>
+          </div>
           <button
-            className="py-[14px] px-5 text-white border border-transparent rounded-full outline-none bg-[#1A8EFD] text-[18px] font-rubik tracking-wide cursor-pointer transition-all duration-400 hover:text-[#1A8EFD] hover:bg-transparent hover:border-[#1A8EFD] flex items-center gap-2"
+            className="sm:text-center py-[14px] px-5 text-white border border-transparent rounded-full outline-none bg-[#1A8EFD] text-[18px] font-rubik tracking-wide cursor-pointer transition-all duration-400 hover:text-[#1A8EFD] hover:bg-transparent hover:border-[#1A8EFD] flex items-center gap-2 "
             type="button"
             onClick={handleBookAppointmentClick}
           >

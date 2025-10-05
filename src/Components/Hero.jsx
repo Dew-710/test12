@@ -36,7 +36,7 @@ function Hero() {
     <div className="w-full min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-[#ECF2FF] to-[#FBFCFF] relative py-8">
       <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12 w-full md:max-w-4/5 mx-auto px-4 md:px-8">
         {/* Text Section */}
-        <div className="sm:text-center sm:items-center flex flex-col w-full md:w-3/5 px-0 md:px-8 text-center md:text-left md:items-start"> "> 
+        <div className="sm:text-center sm:items-center flex flex-col w-full md:w-3/5 px-0 md:px-8 text-center md:text-left md:items-start"> 
         <div classname="w-full sm:p-8 p-4 bg-white rounded-lg shadow-lg mb-6 flex flex-col items-center">
 
           <p className="mb-3 text-[#4d4b4b] font-rubik text-[22px] font-bold tracking-wide">

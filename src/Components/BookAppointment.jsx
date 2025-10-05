@@ -5,8 +5,7 @@ import {
   faCircleCheck,
   faCalendarCheck,
 } from "@fortawesome/free-solid-svg-icons";
-import { useNavigate  } from "react-router-dom";
-import "../Styles/BookAppointment.css";
+import { useNavigate } from "react-router-dom";
 
 function BookAppointment() {
   const navigate = useNavigate();
@@ -16,38 +15,66 @@ function BookAppointment() {
   };
 
   return (
-    <div className="ba-section">
-      <div className="ba-image-content">
-        <img src={Doctor} alt="Doctor Group" className="ba-image1" />
+    <div className="bg-white p-8 flex flex-col lg:flex-row justify-center items-center gap-6">
+      {/* Image */}
+      <div className="w-full lg:w-1/2 text-center mb-8 lg:mb-0">
+        <img
+          src={Doctor}
+          alt="Doctor Group"
+          className="w-4/5 h-auto mx-auto"
+        />
       </div>
 
-      <div className="ba-text-content">
-        <h3 className="ba-title">
-          <span>Ẩm thực Việt Nam</span>
+      {/* Text Content */}
+      <div className="w-full lg:w-1/2 sm:text-left text-center flex flex-col justify-center items-center lg:items-start sm:text-center flex-col justify-center items-center">
+        <h3 className="text-[40px] font-bold tracking-wide font-poppins relative inline-block mb-8">
+          <span className="relative inline-block text-black">
+            Ẩm thực Việt Nam
+            <span className="absolute w-3/4 h-1 bg-[#9D2553] rounded-lg left-0 -bottom-3"></span>
+          </span>
+          <br /><br />
         </h3>
-        <p className="ba-description">
-          Ẩm thực Việt Nam nổi tiếng với sự đa dạng, tươi ngon và cân bằng giữa các hương vị. Những món ăn như phở, bún chả, bánh mì, gỏi cuốn và nem rán không chỉ hấp dẫn mà còn phản ánh văn hóa đặc sắc của người Việt. Mỗi vùng miền đều có những đặc sản riêng, mang lại trải nghiệm ẩm thực phong phú cho thực khách.
-        </p>
 
-        <p className="ba-checks ba-check-first">
-          <FontAwesomeIcon icon={faCircleCheck} style={{ color: "#1E8FFD" }} /> Nguyên liệu tươi ngon
+        <p className="text-[#4d4b4b] my-8 text-[18px] leading-7 tracking-wide font-rubik sm:py-2">
+          Ẩm thực Việt Nam nổi tiếng với sự đa dạng, tươi ngon và cân bằng giữa
+          các hương vị. Những món ăn như phở, bún chả, bánh mì, gỏi cuốn và nem
+          rán không chỉ hấp dẫn mà còn phản ánh văn hóa đặc sắc của người Việt.
+          Mỗi vùng miền đều có những đặc sản riêng, mang lại trải nghiệm ẩm thực
+          phong phú cho thực khách.
         </p>
-        <p className="ba-checks">
-          <FontAwesomeIcon icon={faCircleCheck} style={{ color: "#1E8FFD" }} /> Hương vị đặc trưng
-        </p>
-        <p className="ba-checks">
-          <FontAwesomeIcon icon={faCircleCheck} style={{ color: "#1E8FFD" }} /> Đa dạng món ăn
-        </p>
-        <p className="ba-checks ba-check-last">
-          <FontAwesomeIcon icon={faCircleCheck} style={{ color: "#1E8FFD" }} /> Phù hợp mọi khẩu vị
-        </p>
+        <br />
 
+        {/* Feature List */}
+        <div className="space-y-7 mt-10 mb-10 text-[22px] font-bold font-rubik tracking-wide text-[#4d4b4b] gap-4">
+          <p className="flex items-center gap-2">
+            <FontAwesomeIcon icon={faCircleCheck} className="text-[#1E8FFD]" />
+            Nguyên liệu tươi ngon
+          </p>
+          <br />
+          <p className="flex items-center gap-2">
+            <FontAwesomeIcon icon={faCircleCheck} className="text-[#1E8FFD]" />
+            Hương vị đặc trưng
+          </p>
+          <br />
+          <p className="flex items-center gap-2">
+            <FontAwesomeIcon icon={faCircleCheck} className="text-[#1E8FFD]" />
+            Đa dạng món ăn
+          </p>
+          <br />
+          <p className="flex items-center gap-2">
+            <FontAwesomeIcon icon={faCircleCheck} className="text-[#1E8FFD]" />
+            Phù hợp mọi khẩu vị
+          </p>
+        </div>
+
+        {/* Button */}
         <button
-          className="text-appointment-btn"
           type="button"
           onClick={handleBookAppointmentClick}
+          className="px-6 py-4 bg-[#1A8EFD] text-white rounded-full text-[20px] font-rubik tracking-wide border border-transparent hover:bg-transparent hover:text-[#1A8EFD] hover:border-[#1A8EFD] transition duration-400"
         >
-          <FontAwesomeIcon icon={faCalendarCheck} /> Đặt lịch khám
+          <FontAwesomeIcon icon={faCalendarCheck} className="mr-2" />
+          Đặt lịch khám
         </button>
       </div>
     </div>

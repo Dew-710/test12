@@ -94,6 +94,7 @@ function AppointmentForm() {
           autoComplete="off"
         >
           {/* Họ tên */}
+          <div></div>
           <div>
             <label htmlFor="customerName" className="font-rubik text-gray-700 mb-1 block">
               Họ và tên khách hàng:

@@ -8,6 +8,7 @@ import Reviews from "../Components/Reviews";
 import Doctors from "../Components/Chefs";
 import Footer from "../Components/Footer";
 
+
 function Home() {
   return (
     <div className="home-section">
@@ -19,6 +20,7 @@ function Home() {
       <Reviews />
       <Doctors />
       <Footer />
+
     </div>
   );
 }

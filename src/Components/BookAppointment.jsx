@@ -68,14 +68,14 @@ function BookAppointment() {
         </div>
 
         {/* Button */}
-        <button
-          type="button"
-          onClick={handleBookAppointmentClick}
-          className="px-6 py-4 bg-[#1A8EFD] text-white rounded-full text-[20px] font-rubik tracking-wide border border-transparent hover:bg-transparent hover:text-[#1A8EFD] hover:border-[#1A8EFD] transition duration-400"
-        >
-          <FontAwesomeIcon icon={faCalendarCheck} className="mr-2" />
-          Đặt lịch khám
-        </button>
+       <button
+      type="button"
+      onClick={handleBookAppointmentClick}
+      className="px-6 py-4 bg-blue-500 text-white rounded-full text-[20px] font-rubik tracking-wide border border-transparent hover:bg-white hover:text-blue-500 hover:border-blue-500 transition duration-400 flex items-center"
+    >
+      <FontAwesomeIcon icon={faCalendarCheck} className="mr-2" />
+      Đặt lịch khám
+    </button>
       </div>
     </div>
   );

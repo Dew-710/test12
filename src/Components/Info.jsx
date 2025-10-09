@@ -16,7 +16,8 @@ function Info() {
           </span>
         </h3><br /> <br />
         <p className="my-16 text-gray-500 font-rubik  tracking-wide leading-8 max-w-4xl absolute-center"> 
-          Ẩm thực Việt Nam nổi tiếng với nguyên liệu tươi ngon, hương vị đậm đà và sự cân bằng dinh dưỡng. Các món phổ biến gồm phở, bánh mì và gỏi cuốn. Bữa ăn thường có nhiều rau thơm, cơm, rau củ và nước dùng đậm đà, giúp món ăn Việt vừa ngon miệng vừa bổ dưỡng.
+          Ẩm thực Việt Nam nổi tiếng với nguyên liệu tươi ngon, hương vị đậm đà và sự cân bằng dinh dưỡng. Các món phổ biến gồm phở, bánh mì và gỏi cuốn. Bữa ăn thư
+          ờng có nhiều rau thơm, cơm, rau củ và nước dùng đậm đà, giúp món ăn Việt vừa ngon miệng vừa bổ dưỡng.
         </p>
         <hr />
         <div className="flex flex-col gap-16 items-center text-gray-500">

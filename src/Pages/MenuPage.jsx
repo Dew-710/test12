@@ -1,10 +1,10 @@
 "use client"
 
 import { useState } from "react"
-import MenuHeader from "../components/menu/MenuHeader"
-import CategoryFilter from "../components/menu/CategoryFilter"
-import MenuGrid from "../components/menu/MenuGrid"
-import Cart from "../components/menu/Cart"
+import MenuHeader from "../Components/menu/MenuHeader"
+import CategoryFilter from "../Components/menu/CategoryFilter"
+import MenuGrid from "../Components/menu/MenuGrid"
+import Cart from "../Components/menu/Cart"
 import { useCart } from "../contexts/CartContext"
 
 const MENU_ITEMS = [

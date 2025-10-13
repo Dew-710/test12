@@ -8,6 +8,7 @@ import {
 import "../Styles/Navbar.css";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
+import MenuPage from "../Pages/MenuPage.jsx";
 
 function Navbar() {
   const [nav, setNav] = useState(false);
@@ -36,33 +37,35 @@ function Navbar() {
       </h1>
 
       {/* Desktop */}
-      <ul className="navbar-items">
-        <li>
-          <Link to="/" className="navbar-links">
-            Home
-          </Link>
-        </li>
-        <li>
-          <a href="#services" className="navbar-links">
-            Menu
-          </a>
-        </li>
-        <li>
-          <a href="#about" className="navbar-links">
-            About
-          </a>
-        </li>
-        <li>
-          <a href="#reviews" className="navbar-links">
-            Reviews
-          </a>
-        </li>
-        <li>
-          <a href="#doctors" className="navbar-links">
-            Chef
-          </a>
-        </li>
-      </ul>
+      <div>
+        <ul className="navbar-items">
+          <li>
+            <Link to="/" className="navbar-links">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/MenuPage" className="navbar-links">
+              Menu
+            </Link>
+          </li>
+          <li>
+            <Link to="/about" className="navbar-links">
+              About
+            </Link>
+          </li>
+          <li>
+            <Link to="#reviews" className="navbar-links">
+              Reviews
+            </Link>
+          </li>
+          <li>
+            <Link to="#doctors" className="navbar-links">
+              Chef
+            </Link>
+          </li>
+        </ul>
+      </div>
 
       <button
         className="navbar-btn"
@@ -86,9 +89,10 @@ function Navbar() {
             </Link>
           </li>
           <li>
-            <a onClick={openNav} href="#services">
-              Menu
-            </a>
+            <Link onClick={openNav} to="/MenuPage">
+  Menu
+</Link>
+
           </li>
           <li>
             <a onClick={openNav} href="#about">

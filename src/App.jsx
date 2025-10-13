@@ -5,18 +5,24 @@ import Home from "./Pages/Home";
 import Legal from "./Pages/Legal";
 import NotFound from "./Pages/NotFound";
 import Appointment from "./Pages/Appointment";
+import MenuPage from "./Pages/MenuPage";
+import { CartProvider } from "./contexts/CartContext";
+
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/legal" element={<Legal />} />
-          <Route path="/appointment" element={<Appointment />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Router>
+      <CartProvider>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/legal" element={<Legal />} />
+            <Route path="/appointment" element={<Appointment />} />
+            <Route path="*" element={<NotFound />} />
+            <Route path="/MenuPage" element={<MenuPage />} />
+          </Routes>
+        </Router>
+      </CartProvider>
     </div>
   );
 }

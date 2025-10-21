@@ -10,7 +10,9 @@ export default function MenuHeader({ cartItemCount, onCartClick }) {
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
-              <span className="text-xl font-bold text-white">V</span>
+              <Link to="/">
+                <span className="text-xl font-bold text-white">D</span>
+              </Link>
             </div>
             <div>
               <h1 className="text-xl font-bold text-zinc-900">Menu</h1>

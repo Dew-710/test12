@@ -13,7 +13,7 @@ const MENU_ITEMS = [
     name: "Phở Bò",
     category: "main",
     price: 65000,
-    image: "/vietnamese-beef-pho.jpg",
+    image: "/vietnamese-beef-pho-noodle-soup.jpg",
     description: "Phở bò truyền thống với nước dùng hầm xương 12 tiếng",
   },
   {
@@ -29,7 +29,7 @@ const MENU_ITEMS = [
     name: "Gỏi Cuốn",
     category: "appetizer",
     price: 35000,
-    image: "/vietnamese-spring-rolls.png",
+    image: "/vietnamese-fresh-spring-rolls.png",
     description: "Gỏi cuốn tôm thịt tươi ngon với nước chấm đặc biệt",
   },
   {
@@ -37,7 +37,7 @@ const MENU_ITEMS = [
     name: "Bún Chả Hà Nội",
     category: "main",
     price: 55000,
-    image: "/bun-cha-hanoi.jpg",
+    image: "/vietnamese-bun-cha-grilled-pork.jpg",
     description: "Bún chả Hà Nội chính gốc với thịt nướng thơm lừng",
   },
   {
@@ -45,7 +45,7 @@ const MENU_ITEMS = [
     name: "Cơm Tấm Sườn",
     category: "main",
     price: 50000,
-    image: "/grilled-pork-chop-rice.jpg",
+    image: "/vietnamese-broken-rice-with-grilled-pork.jpg",
     description: "Cơm tấm sườn nướng với trứng ốp la",
   },
   {
@@ -61,7 +61,7 @@ const MENU_ITEMS = [
     name: "Bánh Flan",
     category: "dessert",
     price: 18000,
-    image: "/caramel-flan.png",
+    image: "/vietnamese-flan-caramel-custard.jpg",
     description: "Bánh flan caramel mềm mịn, ngọt dịu",
   },
   {
@@ -69,7 +69,7 @@ const MENU_ITEMS = [
     name: "Cà Phê Sữa Đá",
     category: "drink",
     price: 22000,
-    image: "/vietnamese-iced-coffee.png",
+    image: "/vietnamese-iced-coffee-with-condensed-milk.jpg",
     description: "Cà phê phin truyền thống với sữa đặc",
   },
   {
@@ -77,7 +77,7 @@ const MENU_ITEMS = [
     name: "Trà Đào Cam Sả",
     category: "drink",
     price: 28000,
-    image: "/peach-tea-with-lemongrass.jpg",
+    image: "/vietnamese-iced-lemon-tea.jpg",
     description: "Trà đào cam sả tươi mát, thanh nhiệt",
   },
   {
@@ -85,7 +85,7 @@ const MENU_ITEMS = [
     name: "Sinh Tố Bơ",
     category: "drink",
     price: 30000,
-    image: "/avocado-smoothie.jpg",
+    image: "/vietnamese-avocado-smoothie.jpg",
     description: "Sinh tố bơ béo ngậy, bổ dưỡng",
   },
   {
@@ -93,7 +93,7 @@ const MENU_ITEMS = [
     name: "Bò Lúc Lắc",
     category: "main",
     price: 85000,
-    image: "/shaking-beef.jpg",
+    image: "/placeholder.jpg",
     description: "Bò lúc lắc với khoai tây chiên giòn",
   },
   {
@@ -101,8 +101,40 @@ const MENU_ITEMS = [
     name: "Chả Giò Giòn",
     category: "appetizer",
     price: 40000,
-    image: "/crispy-fried-spring-rolls.jpg",
+    image: "/vietnamese-fried-spring-rolls.jpg",
     description: "Chả giò chiên giòn rụm với nhân thịt tôm",
+  },
+  {
+    id: 13,
+    name: "Bánh Xèo",
+    category: "appetizer",
+    price: 45000,
+    image: "/placeholder.jpg",
+    description: "Bánh xèo giòn rụm với nhân tôm, thịt và giá đỗ",
+  },
+  {
+    id: 14,
+    name: "Cao Lầu",
+    category: "main",
+    price: 60000,
+    image: "/placeholder.jpg",
+    description: "Đặc sản Hội An với mì, thịt heo và rau sống",
+  },
+  {
+    id: 15,
+    name: "Mì Quảng",
+    category: "main",
+    price: 55000,
+    image: "/placeholder.jpg",
+    description: "Mì Quảng với nước dùng đậm đà, tôm, thịt và bánh tráng",
+  },
+  {
+    id: 16,
+    name: "Nước Mía",
+    category: "drink",
+    price: 15000,
+    image: "/placeholder.jpg",
+    description: "Nước mía tươi mát, giải nhiệt",
   },
 ]
 
@@ -121,15 +153,15 @@ export default function MenuPage() {
   const filteredItems =
     selectedCategory === "all" ? MENU_ITEMS : MENU_ITEMS.filter((item) => item.category === selectedCategory)
 
-  const { items = [] } = useCart() || {} // Ensure `items` has a default value
+  const { items = [] } = useCart() ?? { items: [] } // Ensure `items` has a default value even if useCart returns null or undefined
   const cartItemCount = items.reduce((sum, item) => sum + item.quantity, 0)
 
   return (
-    <div className="min-h-screen bg-zinc-950">
+    <div className="min-h-screen bg-white">
       <MenuHeader cartItemCount={cartItemCount} onCartClick={() => setIsCartOpen(true)} />
 
-      <main className="container mx-auto px-4 py-8">
-        <div className="flex flex-col lg:flex-row gap-8">
+      <main className="mx-auto px-4 py-8">
+        <div className="flex flex-col lg:flex-row gap-10 mr-xl">
           <aside className="lg:w-64 flex-shrink-0">
             <CategoryFilter
               categories={CATEGORIES}

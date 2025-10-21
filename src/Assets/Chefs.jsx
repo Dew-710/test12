@@ -1,9 +1,9 @@
 import React from "react";
 import ChefCards from "./Chefcards";
-import profile1 from "../Assets/banh-mi-sandwich.jpg";
-import profile2 from "../Assets/banh-mi-sandwich.jpg";
-import profile3 from "../Assets/banh-mi-sandwich.jpg";
-import profile4 from "../Assets/banh-mi-sandwich.jpg";
+import profile1 from "../assets/vietnamese-avocado-smoothie.png";
+import profile2 from "../assets/vietnamese-avocado-smoothie.png";
+import profile3 from "../assets/vietnamese-avocado-smoothie.png";
+import profile4 from "../assets/vietnamese-avocado-smoothie.png";
 
 const chefs = [
   {
@@ -40,7 +40,7 @@ const chefs = [
   },
 ];
 
-function Chefs() {
+function Doctors() {
   return (
     <div className="p-[32px] text-center bg-white mr-4 " id="chefs">
       <div className="mb-16">
@@ -61,4 +61,4 @@ function Chefs() {
   );
 }
 
-export default Chefs;
+export default Doctors;

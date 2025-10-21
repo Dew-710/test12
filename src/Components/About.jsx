@@ -1,5 +1,5 @@
 import React from "react";
-import Doctor from "../Assets/doctor-group.png";
+import Doctor from "../Assets/banh-mi-sandwich.jpg";
 import SolutionStep from "./SolutionStep";
 
 
@@ -8,7 +8,7 @@ function About() {
     <div className=" p-[32px] flex justify-center items-center gap-[24px] bg-gradient-to-r from-[#ECF2FF] to-[#FBFCFF] flex-col md:flex-row" id="about">
     
       <div className="hidden md:block md:w-1/2 text-center max-w-full">
-        <img src={Doctor} alt="Nhóm bác sĩ" className="w-4/5 h-auto" />
+        <img src={Doctor} alt="Nhóm bác sĩ" className="w-4/5 h-auto rounded-[10px]" />
       </div>
 
       <div className="w-full md:w-1/2">

@@ -1,5 +1,5 @@
 import React from "react";
-import Doctor from "../Assets/doctor-book-appointment.png";
+import Doctor from "../Assets/banh-mi-sandwich.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCircleCheck,
